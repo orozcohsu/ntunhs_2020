@@ -1,0 +1,35 @@
+bins,dept_name,count
+105000_120000,Sales,1
+30000_45000,Development,2
+30000_45000,Production,1
+30000_45000,Research,1
+45000_60000,Customer Service,3
+45000_60000,Development,9
+45000_60000,Human Resources,3
+45000_60000,Production,4
+45000_60000,Quality Management,1
+45000_60000,Research,3
+45000_60000,Sales,1
+60000_75000,Customer Service,1
+60000_75000,Development,13
+60000_75000,Finance,1
+60000_75000,Human Resources,5
+60000_75000,Marketing,1
+60000_75000,Production,8
+60000_75000,Quality Management,1
+60000_75000,Research,4
+60000_75000,Sales,2
+75000_90000,Development,6
+75000_90000,Production,8
+75000_90000,Quality Management,3
+75000_90000,Research,2
+75000_90000,Sales,6
+90000_105000,Customer Service,2
+90000_105000,Development,2
+90000_105000,Finance,3
+90000_105000,Human Resources,2
+90000_105000,Marketing,2
+90000_105000,Production,2
+90000_105000,Quality Management,1
+90000_105000,Research,1
+90000_105000,Sales,6
