@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <title>Demo Database</title>
+    <style type="text/css">
+        body { background-color: white; }
+    </style>
+</head>
+
+<body class="body">
+    <div class="jumbotron text-center">
+        <div class="page-header">
+            <h3 class="text-primary">Demo Database: All Employees </h3>
+        </div>
+        <table class="table table-striped table-bordered table-hover">
+            <tr>
+                <th>first_name</th> 
+                <th>last_name</th>
+                <th>gender</th>  
+                <th>dept_name</th> 
+                <th>salary</th> 
+                <th>title</th> 				
+            </tr>
+        
+            {% for row in employees %}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+					<td>{{row[3]}}</td>
+					<td>{{row[4]}}</td>
+					<td>{{row[5]}}</td>
+                </tr>
+            {% endfor %}
+                        
+        </table>
+        
+    </div>  
+   
+</body>
+
+</html>
