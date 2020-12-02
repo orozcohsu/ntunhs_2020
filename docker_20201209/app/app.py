@@ -13,6 +13,7 @@ def main_form_post():
     sql = request.form['sql']
     if os.path.isfile('/app/static/out.png'):
         os.remove('/app/static/out.png')
+
     obj = data_vis(sql)
     obj.query()
 	

@@ -6,6 +6,8 @@
 	 <form method="POST">
      <input type="text" name="sql" style="font-size:20px" size=100>
      <input type="submit" id="query">
+	 <h3>Sample: select * from ntuhs.salary_gender </h3>
+	 <h3>Sample: select * from ntuhs.salary_gender where age > 60 </h3>
      </form>
 	 <button type='button' id ='retrieve' disabled>show</button>
      <img src="" id="out_img" />
@@ -24,6 +26,7 @@
            type: "GET",
            success: function(response) {
                $("#out_img").attr('src', '/static/' + response);
+			   $('#query').prop('disabled', false);
           },
           error: function(xhr) {
          }

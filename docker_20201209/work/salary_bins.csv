@@ -1,4 +1,4 @@
-bins,dept_name,count
+bins,dept_name,cnt
 105000_120000,Sales,1
 30000_45000,Development,2
 30000_45000,Production,1
