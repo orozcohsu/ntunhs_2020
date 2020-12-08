@@ -2,13 +2,17 @@ import pymysql
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import glob
+import os
+import random
+import string
 
 class data_vis():
 
     def __init__(self, sql):
         self.sql = sql
   
-    def query(self):
+    def query_vis(self):
         try:
             conn = pymysql.connect(host='172.17.0.2', port=3306, user='root', \
                                    passwd='1234', charset='utf8')
@@ -28,8 +32,16 @@ class data_vis():
             plt.ylabel("Salary")
             plt.title("Employee Salary")
             plt.tight_layout()
- 
-            plt.savefig("/app/static/out.png", format='png',dpi=80)
+            
+            #delete all files if exists in the folder
+            files = glob.glob('/app/static/*')
+            for f in files:
+                os.remove(f)
+
+            letters = string.ascii_lowercase
+            nm = ''.join(random.choice(letters) for i in range(5))
+	
+            plt.savefig("/app/static/" + nm + ".png", format='png',dpi=80)
         except Exception as ex:
             print(ex)
         finally:

@@ -8,6 +8,7 @@
      <input type="submit" id="query">
 	 <h3>Sample: select * from ntuhs.salary_gender </h3>
 	 <h3>Sample: select * from ntuhs.salary_gender where age > 60 </h3>
+	 <h3>Note: if fetching no data, show button will be disable  </h3>
      </form>
 	 <button type='button' id ='retrieve' disabled>show</button>
      <img src="" id="out_img" />
@@ -17,6 +18,7 @@
 	
 	   $("#query").click(function () {
 		   $('#query').prop('disabled', true);
+		   $("#out_img").hide();
 		   
 	   });
 	   
@@ -25,8 +27,9 @@
            url: "{{ url_for ('get_img') }}",
            type: "GET",
            success: function(response) {
-               $("#out_img").attr('src', '/static/' + response);
-			   $('#query').prop('disabled', false);
+		       $("#out_img").show();
+		       $("#out_img").removeAttr("src").attr("src", '/static/' + response);
+               
           },
           error: function(xhr) {
          }
@@ -42,6 +45,7 @@
 			success: function(response) {
 				var isTrueSet = (response == 'true');
 				$('#retrieve').prop('disabled', isTrueSet);
+				$('#query').prop('disabled', false);
 			},
 			error: function(xhr) {
 			}
