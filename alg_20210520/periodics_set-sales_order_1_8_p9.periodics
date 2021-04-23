@@ -1,0 +1,9 @@
+time-series-periodics
+*pre-defined*:AM
+*pre-defined*:DayOfWeek
+*pre-defined*:DayOfMonth
+*pre-defined*:NumDaysInMonth
+*pre-defined*:Weekend
+*pre-defined*:Month
+*pre-defined*:Quarter
+*custom*:in_promotion
